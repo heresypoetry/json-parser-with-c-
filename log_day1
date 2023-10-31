@@ -1,0 +1,78 @@
+# Day 1
+
+## 什么是 json ?
+
+json不是一门编程语言，而应该被理解为一种数据格式。json也不属于javaScript。它是一种被通用的数据格式，很多语言都有解析和序列化json的内置能力。
+
+json 是（**J**ava**S**cript **O**bject **N**otation）的缩写。意思是JavaScript对象表示法。json 是一种轻量级数据交换格式。易于阅读和编写，也易于机器解析和生成。其本身是一串字符串，但是具有固定的格式，符合这个格式的字符串，我们将其称之为json串。
+
+因为json格式在语法上类似于创建JavaScript对象的代码。因此，JavaScript程序可以轻松地将json数据转换为JavaScript对象。当我们想要储存数据是，无论储存在哪里，文本格式都是可行的。json只是一些按照规定书写的字符串。例如：
+
+`'{"name":"John", "age":30, "car":null}'` 就是一个字符串，定义了一个有三个性质（名字，年龄，车）的对象。json通常被用于在不同的网页之间传送数据。因为json采用完全独立于语言的文本格式，但是使用了一些高级语言的习惯，使用不同语言的人也可以通过json互相传输数据。，使得json成为理想的数据交换语言。
+
+
+
+Javascript自带将json转换为Javascript中的对象的函数，也有将Javascript中的对象转换为json形式的函数。但是c++并不自带类似的解析json的功能，需要使用其它的相关的第三方库来实现。相关功能的第三方库有很多。
+
+**本次项目的目的就是实现一个简单的c++的json解析器。**
+
+---
+
+## json 书写格式：
+
+JSON建构于两种结构：
+
+- 第一种结构是 对象，即“名称/值”的集合（A collection of name/value pairs）。
+
+​	在不同语言中，其可能具有不同的含义。例如，其可以被理解为*对象（object）*，纪录（record），结构（struct），字典（dictionary），哈希表（hash table），有键列表（keyed list），或者关联数组 （associative array）。
+
+
+
+对象是一个无序的“‘名称/值’对”集合。一个对象以 `{`左括号 开始， `}`右括号 结束。每个“名称”后跟一个 `:`冒号 ；“‘名称/值’ 对”之间使用 `,`逗号 分隔。值（*value*）可以是双引号括起来的字符串（*string*）、数值(number)（包括整数和浮点数）、`true`、`false`、 `null`、对象（object）或者数组（array）。这些结构可以嵌套。
+
+
+
+---
+
+
+
+- 第二种结构是数组，即值的有序列表（An ordered list of values）。在大部分语言中，它被理解为数组（array）。
+
+
+
+数组是值（value）的有序集合。一个数组以 `[`左中括号 开始， `]`右中括号 结束。值之间使用 `,`逗号 分隔。同样地，值可以是双引号括起来的字符串（*string*）、数值(number)（包括整数和浮点数）、`true`、`false`、 `null`、对象（object）或者数组（array）。这些结构可以嵌套。
+
+
+
+字符串与C或者Java的字符串类似，字符串（*string*）是由双引号包围的任意数量Unicode字符的集合，使用反斜线转义。一个字符（character）即一个单独的字符串（character string）。
+
+----
+
+此外，空格可以被加入任何字符之间，以上就是json中数据的书写规则。
+
+
+
+## json举例：
+
+例如， vscode中就有一些json文件，可以在这里填写以完成偏好设定，比如设置键盘快捷键之类。还有预设定文件也是json, 可以搜索框输入>json查询vs code相关json文件。
+
+例如：
+
+对象：
+
+```json
+{
+            "name": "ha ha",
+            "age": 20,
+            "city": "Hangzhou"
+}
+```
+
+值：
+
+```json
+[  "apple",  "banana",  "orange"]
+```
+
+
+
